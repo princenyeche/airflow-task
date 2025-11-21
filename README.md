@@ -17,7 +17,7 @@ docker run -p 8181:8181 apache/airflow:slim-latest-python3.13
 lsof -i -n -P | grep TCP
 ```
 
-This way when creating the service port above, you don't hit a conflict.
+This way, when creating the service port above, you don't hit a conflict.
 
 
 Building an image using a `Dockerfile`
@@ -37,8 +37,8 @@ USER airflow
 
 ## Set Airflow Home
 Airflow requires a home directory, and uses `~/airflow` by default, but you can set a 
-different location if yu prefer. The `AIRFLOW_HOME` environment variable is used to inform Airflow
-of the desire location.
+different location if you prefer. The `AIRFLOW_HOME` environment variable is used to inform Airflow
+of the desired location.
 
 ```shell
 export AIRFLOW_HOME=~/airflow
@@ -88,7 +88,7 @@ airflow standalone
 ### Access Airflow UI
 
 Visit `localhost:8080` in your browser and log in with the admin account details shown in the terminal.
-Note: The admin password is only displayed once and saved in the airflow directory which is found 
+Note: The admin password is only displayed once and saved in the airflow directory, which is found 
 ```shell
 cd ~/airflow/simple_auth_manager_passwords.json.generated
 ```
